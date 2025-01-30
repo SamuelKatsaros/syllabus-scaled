@@ -34,3 +34,5 @@
 2024-08-31T22:16:45.114Z - Uncaught Exception: Error: listen EADDRINUSE: address already in use :::3001
 2024-09-03T23:51:09.977Z - Uncaught Exception: Error: listen EADDRINUSE: address already in use :::3002
 2024-09-04T19:04:40.882Z - Uncaught Exception: Error: listen EADDRINUSE: address already in use :::3002
+2025-01-30T06:14:21.788Z - Error initializing database: Error: The server does not support SSL connections
+2025-01-30T06:14:21.794Z - Failed to initialize database: Error: The server does not support SSL connections

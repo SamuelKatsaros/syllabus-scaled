@@ -10,6 +10,7 @@ const fs = require('fs');
 const app = express();
 const port = process.env.PORT || 3001;
 const isDev = process.env.NODE_ENV === 'development';
+const isProduction = process.env.NODE_ENV === 'production';
 
 // Improved error logging
 const logError = (message, error) => {
@@ -29,10 +30,8 @@ const limiter = rateLimit({
 app.use(limiter);
 
 const pool = new Pool({
-  connectionString: process.env.DATABASE_URL,
-  ssl: {
-    rejectUnauthorized: false
-  }
+  connectionString: process.env.DATABASE_URL || "postgresql://syllabus_user:your_secure_password@localhost:5432/syllabus",
+  ssl: isProduction ? { rejectUnauthorized: false } : false
 });
 
 const initializeDatabase = async () => {
