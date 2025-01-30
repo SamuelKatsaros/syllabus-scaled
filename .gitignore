@@ -1,0 +1,8 @@
+node_modules
+uploads
+build
+project_backup.tar.gz
+project_backup.tar.gz
+.vercel
+*.sqlite
+*.db
